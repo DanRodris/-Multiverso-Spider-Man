@@ -1,0 +1,63 @@
+.navigator{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.navigator ul li{
+    margin:60px 0 ;
+}
+/* Tira a margem do 1° item */
+.navigator ul li:first-child{
+    margin-top: 0 ;
+}
+
+/* Tira a margem de baixo do último item */
+.navigator ul li:last-child{
+    margin-bottom: 0 ;
+}
+
+/* Editando os números */
+.navigator ul li a{
+    color: white;
+    border: solid 2px white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Criando a linha na Vertical */
+.navigator::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+/* Colocando a linha atrás */
+.navigator ul{
+    z-index: 1;
+}
+
+.navigator ul li a:hover,
+.navigator ul li a:active{
+    color: var(--primary-color);
+    background-color: white;
+    transition: 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.navigator .navigator__icon{
+    position: absolute;
+    top: -20px;
+}
